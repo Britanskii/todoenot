@@ -1,32 +1,30 @@
 import {Box} from "@mui/material"
 import {useSwitchStyles} from "./useSwitchStyles"
-import {useState} from "react"
+import {FC} from "react"
 import {motion} from "framer-motion"
-import toRem from "../../helpers/toRem"
+import Close from "../../resources/icons/Close"
+import Right from "../../resources/icons/Right"
+import {appearVariants} from "../../animations/variants/variants"
 
-const variants = {
-	disable: {
-		x: toRem(3.5),
-		y: toRem(2.5)
-	},
-	active:  {
-		x: toRem(22.5),
-		y: toRem(2.5)
-	}
+interface ISwitch {
+	className?: string
+	active: boolean,
+	setActive: (bool: boolean) => void
 }
 
-const Switch = () => {
-	const [active, setActive] = useState(false)
+const Switch: FC<ISwitch> = ({className = "", active, setActive}) => {
 
 	const styles = useSwitchStyles()
 
 	const onClick = () => {
-		setActive(active => active = !active)
+		setActive(!active)
 	}
 
 	return (
-		<Box onClick={onClick} className={`${styles.switch} ${active ? styles.active : ""}`}>
-			<motion.div variants={variants} initial={"disable"} animate={active ? "active" : "disable"} className={styles.ball}/>
+		<Box onClick={onClick} className={`${styles.switch} ${active ? styles.active : ""} ${className}`}>
+			<motion.div variants={appearVariants} initial={"disable"} animate={active ? "active" : "disable"} className={styles.ball}>
+				{active ? <Right className={styles.icon}/> : <Close className={styles.icon}/>}
+			</motion.div>
 		</Box>
 	)
 }

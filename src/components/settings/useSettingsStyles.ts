@@ -7,6 +7,10 @@ export const useSettingsStyles = makeStyles(({palette}: Theme) => (
 		settings: {
 			position: "relative"
 		},
+		rotate: {
+			display: "flex",
+			alignItems: "center"
+		},
 		icon: {
 			width: toRem(28.5),
 			cursor: "pointer",
@@ -19,7 +23,7 @@ export const useSettingsStyles = makeStyles(({palette}: Theme) => (
 			borderRadius: toRem(20),
 			opacity: 0,
 			position: "absolute",
-			right: "50%",
+			left: "50%",
 			transform: `translateY(${toRem(-18)})`,
 			backgroundColor: palette.primary.main,
 			boxShadow: `0 0 ${toRem(20)} ${palette.primary.dark}`,

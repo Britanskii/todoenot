@@ -1,7 +1,7 @@
 import {Box} from "@mui/material"
 import {useHeaderStyles} from "./useHeaderStyles"
 import InformationBland from "../information/InformationBland"
-import {Dispatch, FC, SetStateAction, useState} from "react"
+import {Dispatch, FC, SetStateAction} from "react"
 
 interface IHeader {
 	isOpen: boolean,

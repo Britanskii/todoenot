@@ -13,6 +13,7 @@ export const useSettingsStyles = makeStyles(({palette}: Theme) => (
 		},
 		icon: {
 			width: toRem(28.5),
+			height: toRem(28.5),
 			cursor: "pointer",
 			pointerEvents: "inherit",
 		},

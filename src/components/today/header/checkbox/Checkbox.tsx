@@ -6,12 +6,12 @@ interface ICheckbox extends ISvg {
     active: boolean
 }
 
-const Checkbox: FC<ICheckbox> = ({active, className = ""}) => {
+const Checkbox: FC<ICheckbox> = ({active, onClick, className = ""}) => {
 
 	const styles = useCheckboxStyles()
 
 	return (
-		<svg className={`${styles.checkbox} ${className}`}
+		<svg onClick={onClick} className={`${styles.checkbox} ${className}`}
 			viewBox={"0 0 23 23"}
 			fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path className={`${styles.background} ${active ? styles.active : ""}`}

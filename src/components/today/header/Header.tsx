@@ -5,23 +5,33 @@ import Checkbox from "./checkbox/Checkbox"
 import {ITask} from "../../../interfaces/interfaces"
 
 interface IHeader {
-	tasks: ITask[]
+	tasks: ITask[],
+	setTasks: (tasks: ITask[]) => void
 }
 
-const Header: FC<IHeader> = ({tasks}) => {
+const Header: FC<IHeader> = ({tasks, setTasks}) => {
 	const [active, setActive] = useState(false)
+
+	const isAllSelected = tasks.filter(task => !task.success).length === 0
 
 	const styles = useHeaderStyles()
 
 	useEffect(() => {
-		const isAllSelected = tasks.filter(task => !task.success).length === 0
-
 		setActive(isAllSelected)
-	}, [tasks])
+	}, [isAllSelected])
+
+	const toggleTasksSuccess = () => {
+		if (isAllSelected) {
+			setTasks(tasks.map(task => ({...task, success: false})))
+		}
+		else {
+			setTasks(tasks.map(task => ({...task, success: true})))
+		}
+	}
 
 	return (
 		<Box className={styles.header}>
-			<Checkbox className={styles.checkbox} active={active}/>
+			<Checkbox onClick={toggleTasksSuccess} className={styles.checkbox} active={active}/>
 			<Typography>Today Tasks</Typography>
 		</Box>
 	)

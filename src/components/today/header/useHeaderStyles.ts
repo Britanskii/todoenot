@@ -10,6 +10,7 @@ export const useHeaderStyles = makeStyles(({palette}: Theme) => (
 			padding: `0 ${toRem(16)}`,
 		},
 		checkbox: {
+			cursor: "pointer",
 			marginRight: toRem(10)
 		},
 		active: {

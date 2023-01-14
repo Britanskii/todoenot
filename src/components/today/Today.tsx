@@ -26,7 +26,7 @@ const Today = () => {
 
 	return (
 		<Box className={styles.today}>
-			<Header tasks={tasks}/>
+			<Header tasks={tasks} setTasks={setLocalTasks}/>
 			<Schedule tasks={tasks} setTasks={setLocalTasks} className={styles.body}/>
 		</Box>
 	)

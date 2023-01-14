@@ -74,9 +74,9 @@ const Calendar = () => {
 			} else {
 				let year = currentYear
 				let monthNumber = currentMonth!.monthNumber + 1
-				if (monthNumber % 12 === 0) {
+				if (monthNumber % 13 === 0) {
 					setCurrentYear(++year)
-					monthNumber++
+					monthNumber = (monthNumber) % 12
 				}
 				const daysMax = getDaysByMonthAndYear(monthNumber, year)
 				const newCurrentMonth = {monthNumber, daysMax, daysCount: 1, year}

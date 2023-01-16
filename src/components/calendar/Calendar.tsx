@@ -32,7 +32,7 @@ const Calendar = () => {
 
 		const scrollPercent = Math.round((scrollBottom / scrollEvent.scrollHeight) * 100)
 
-		if (scrollPercent > 99) {
+		if (scrollPercent > 95) {
 			setIsScrolled(true)
 		}
 	}

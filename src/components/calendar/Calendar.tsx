@@ -28,9 +28,11 @@ const Calendar = () => {
 	const scrollHandler = (event: Event) => {
 		const scrollEvent = event.target as HTMLDivElement
 
-		const scrollPercent = (scrollEvent.scrollTop / scrollEvent.scrollHeight ) * 100
+		const scrollBottom = scrollEvent.scrollTop + scrollEvent.offsetHeight
 
-		if (scrollPercent >= 50) {
+		const scrollPercent = (scrollBottom / scrollEvent.scrollHeight) * 100
+
+		if (scrollPercent > 95) {
 			setIsScrolled(true)
 		}
 	}

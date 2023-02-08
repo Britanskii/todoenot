@@ -10,11 +10,11 @@ Todo Enote is a simple to-do list app that helps you keep track of your daily ta
 
 ## Getting Started
 1. Clone the repository:
-$ git clone https://github.com/Britanskii/todoenot
+`$ git clone https://github.com/Britanskii/todoenot`
 2. Install dependencies:
-$ npm install
+`$ npm install`
 3. Start the app:
-$ npm start
+`$ npm start`
 
 4. Access the app at `http://localhost:3000`
 

@@ -16,4 +16,4 @@ Todo Enot is a simple to-do list app that helps you keep track of your daily tas
 If you want to contribute to Todo Enote, feel free to open a pull request with your changes. We appreciate any help in making Todo Enote better.
 
 ## License
-Todo Enote is licensed under the MIT License.
+Todo Enot is licensed under the MIT License.

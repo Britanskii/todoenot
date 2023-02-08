@@ -1,12 +1,6 @@
-# Todo Enote
+# Todo Enot
 
-Todo Enote is a simple to-do list app that helps you keep track of your daily tasks. The app is designed with a clean and minimalistic interface, making it easy to use and navigate. With Todo Enote, you can easily add, edit, and delete tasks, set reminders, and mark tasks as completed.
-
-## Features
-- Add, edit, and delete tasks
-- Set reminders for tasks
-- Mark tasks as completed
-- Clean and minimalistic interface
+Todo Enot is a simple to-do list app that helps you keep track of your daily tasks. The app is designed with a clean and minimalistic interface, making it easy to use and navigate. With Todo Enote, you can easily add, edit, and delete tasks, set reminders, and mark tasks as completed.
 
 ## Getting Started
 1. Clone the repository:
